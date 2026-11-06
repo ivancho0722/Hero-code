@@ -286,6 +286,26 @@ body{background:
 @media (max-width:819px),(orientation:portrait){.cycle .t{font-size:40px}.cycle{padding:10px 16px 8px}}
 @media (max-height:700px){.cycle .t{font-size:32px}.bar{height:16px}}
 @media (min-width:820px) and (orientation:landscape){.cycle .t{font-size:60px}.bar{height:28px}}
+
+/* ===== ANDROID / PANTALLAS BAJAS ===== */
+html,body{overflow-y:auto}
+.app{min-height:0}
+.end{position:sticky;bottom:calc(env(safe-area-inset-bottom) + 6px);z-index:5}
+@media (max-height:800px) and (orientation:portrait),(max-height:800px) and (max-width:819px){
+  .app{gap:7px;grid-template-rows:auto auto auto auto auto auto auto minmax(64px,1fr) auto}
+  .head{height:40px}.logo b{font-size:26px}.logo svg{width:54px}
+  .total{padding:8px 12px 8px 16px}.total .big{font-size:52px}.pause{width:72px;height:56px}
+  .cycle{padding:8px 14px 8px}.bar{height:16px;margin:6px 0 4px}.cycle .t{font-size:34px}.cycle .t small{font-size:18px}
+  .hint{display:none}.cycle.over .hint{display:block;font-size:13px}
+  .adr{padding:8px 12px}.adr .tm b{font-size:30px}
+  .shock,.amio{min-height:58px;padding:6px 10px}.amio .d{font-size:20px}
+  .rb{height:44px}.mb{height:42px}.end{height:56px;font-size:21px}
+  .log{padding:8px 6px 4px 14px}.log li{padding:5px 0;font-size:15px}
+}
+@media (max-height:660px) and (max-width:819px){
+  .total .big{font-size:44px}.pause{height:48px}.cycle .t{font-size:28px}
+  .shock,.amio{min-height:50px}.amio .nx{display:none}.rb{height:40px}.mb{height:38px}.end{height:50px}
+}
 </style>
 </head>
 <body class="st-idle">
